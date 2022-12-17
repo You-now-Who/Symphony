@@ -106,3 +106,113 @@ body {
     cursor: pointer;
     margin: 0.5rem 0;
 }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+    font-size: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.switch input {
+    display: none;
+}
+
+.switch__indicator::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #fbf8f8;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-animation-name: pulsein;
+    animation-name: pulsein;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+.switch__indicator::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 80px;
+    height: 8px;
+    background-color: #fbf8f8;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+input:checked + .switch__indicator::after {
+    background-color: #ffb4e5;
+    transform: translateX(40px);
+    -webkit-animation-name: pulseout;
+    animation-name: pulseout;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+input:checked + .switch__indicator::before {
+    background-color: #ffb4e5;
+}
+
+@-webkit-keyframes pulsein {
+    0%,
+    100% {
+        top: 0px;
+        height: 40px;
+        width: 40px;
+    }
+    50% {
+        top: 6px;
+        height: 28px;
+        width: 52px;
+    }
+}
+
+@keyframes pulsein {
+    0%,
+    100% {
+        top: 0px;
+        height: 40px;
+        width: 40px;
+    }
+    50% {
+        top: 6px;
+        height: 28px;
+        width: 52px;
+    }
+}
+@-webkit-keyframes pulseout {
+    0%,
+    100% {
+        top: 0px;
+        height: 40px;
+        width: 40px;
+    }
+    50% {
+        top: 6px;
+        height: 28px;
+        width: 52px;
+    }
+}
+@keyframes pulseout {
+    0%,
+    100% {
+        top: 0px;
+        height: 40px;
+        width: 40px;
+    }
+    50% {
+        top: 6px;
+        height: 28px;
+        width: 52px;
+    }
+}
