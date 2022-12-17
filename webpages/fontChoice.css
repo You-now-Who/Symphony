@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(243, 229, 229);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(240, 16, 16, 0.1);
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+#navbar {
+    background-color: rgb(243, 229, 229);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(240, 16, 16, 0.1);
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+#font-choice {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #000;
+
+    margin: 0;
+    padding: 0;
+
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+}
+
+#font1 {
+    font-family: sans-serif;
+}
+
+#font2 {
+    font-family: "Times New Roman";
+}
+
+#font3 {
+    font-family: "Verdana";
+}
+
+#font4 {
+    font-family: "Arial";
+}
+
+#font5 {
+    font-family: "Comic Sans MS";
+}
+
+#font6 {
+    font-family: "Courier New";
+}
+
+#font7 {
+    font-family: "Georgia";
+}
+
+#font8 {
+    font-family: "Impact";
+}
+
+#font9 {
+    font-family: "Lucida Console";
+}
+
+#font10 {
+    font-family: "Tahoma";
+}
+
+#font11 {
+    font-family: "Trebuchet MS";
+}
+
+#font12 {
+    font-family: Verdana;
+}
+
+#font13 {
+    font-family: "Calibri";
+}
+
+#font14 {
+    font-family: "Helvetica";
+}
+
+#font15 {
+    font-family: "Lucida Sans";
+}
+
+#save {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
