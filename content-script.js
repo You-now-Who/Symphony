@@ -9,21 +9,33 @@ let fonts = {"span": "Times New Roman", "p": "Times New Roman", "em": "Helvetica
 let colors = {"span": "red", "p": "white", "em": "white", "b": "yellow", "i": "pink", "u": "white", "a": "blue", "li": "purple", "td": "white", "th": "white", "input": "white", "option": "white", "h1": "white", "h2": "white", "h3": "white", "h4": "white", "h5": "white", "h6": "white", "div": "green", "default": "white"}
 
 chrome.storage.local.get(['fonts'], function(result) {
-    console.log('Value currently is ' + result.fonts);
+    console.log('Value currently is: ')
+    console.log(result.fonts);
     fonts = result.fonts;
-    console.log(fonts);
+    
+    for (let i = 0; i < tags.length; i++) {
+        let elements = document.getElementsByTagName(tags[i]);
+        for (let j = 0; j < elements.length; j++) {
+            elements[j].style.fontFamily = fonts[tags[i]];
+            elements[j].style.backgroundColor = 'black';
+            elements[j].style.color = colors[tags[i]];
+            console.log(elements[j].style.fontFamily)
+        }
+    }
+    
 });
 
+console.log(fonts);
 
-
-for (let i = 0; i < tags.length; i++) {
-    let elements = document.getElementsByTagName(tags[i]);
-    for (let j = 0; j < elements.length; j++) {
-        elements[j].style.fontFamily = fonts[tags[i]];
-        elements[j].style.backgroundColor = 'black';
-        elements[j].style.color = colors[tags[i]];
-    }
-}
+// for (let i = 0; i < tags.length; i++) {
+//     let elements = document.getElementsByTagName(tags[i]);
+//     for (let j = 0; j < elements.length; j++) {
+//         elements[j].style.fontFamily = fonts[tags[i]];
+//         elements[j].style.backgroundColor = 'black';
+//         elements[j].style.color = colors[tags[i]];
+//         console.log(elements[j].style.fontFamily)
+//     }
+// }
 
 
 
