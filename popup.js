@@ -6,6 +6,16 @@ button.addEventListener("click", async () => {
     
     // alert("button clicked");
 
+    document.getElementById("btn").innerHTML = "Clicked";
+
+    let h1 = document.getElementById("h1Font").innerHTML;
+    let h2 = document.getElementById("h2Font").innerHTML;
+    let h3 = document.getElementById("h3Font").innerHTML;
+    let h4 = document.getElementById("h4Font").innerHTML;
+    let p = document.getElementById("pFont").innerHTML;
+    let li = document.getElementById("liFont").innerHTML;
+    
+
     chrome.runtime.sendMessage({
         msg: "buttonClicked", 
         data: {
