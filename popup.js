@@ -1,4 +1,22 @@
 console.log("popup.js loaded");
+let fonts
+
+chrome.storage.local.get(['fonts'], function(result) {
+    console.log('Value popup currently is: ')
+    console.log(result.fonts);
+    fonts = result.fonts;
+
+    document.getElementById("h1Font").value = fonts.h1
+    document.getElementById("h2Font").value = fonts.h2
+    document.getElementById("h3Font").value = fonts.h3
+    document.getElementById("h4Font").value = fonts.h4
+    document.getElementById("pFont").value = fonts.p
+    document.getElementById("aFont").value = fonts.a
+    document.getElementById("liFont").value = fonts.li
+    document.getElementById("divFont").value = fonts.div
+    console.log('Values set!')
+});
+
 
 const button = document.querySelector("#btn");
 button.addEventListener("click", async () => {
