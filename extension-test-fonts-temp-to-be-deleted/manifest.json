@@ -2,13 +2,13 @@
     "manifest_version": 3,
     "name": "Symphony",
     "version": "1.0",
-    "description": "Symphony is a dyslexic friendly browser extension that helps you read efficiently.",
+    "description": "Font manager for dyslexic people",
   
     "icons": {
-        "16": "icons/icon-16.jpg",
-        "32": "icons/icon-32.jpg",
-        "48": "icons/icon-48.jpg",
-        "128": "icons/icon-128.jpg"
+      "16": "images/icon.jpg",
+      "32": "images/icon.jpg",
+      "48": "images/icon.jpg",
+      "128": "images/icon.jpg"
     },
 
     "action": {
