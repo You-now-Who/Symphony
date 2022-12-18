@@ -1,2 +1,2 @@
-# Syphony
+# Symphony
  Symphonize websites for dyslexic people
