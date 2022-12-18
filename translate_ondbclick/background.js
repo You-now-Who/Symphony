@@ -16,7 +16,7 @@ function getSelectionText() {
 }
 
 function onDblClick(info) {
-    const url = `http://translate.google.com/#auto/${'hindi'}/${encodeURIComponent(info.selectionText)}`;
+    const url = `http://translate.google.com/#auto/${hindi}/${encodeURIComponent(info.selectionText)}`;
     ga('set', 'checkProtocolTask', () => { /* do nothing */ });
     ga('send', {
       hitType: 'event',
