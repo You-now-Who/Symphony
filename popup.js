@@ -24,9 +24,9 @@ button.addEventListener("click", async () => {
     
     // alert("button clicked");
 
-    document.getElementById("btn").innerHTML = "Clicked";
+    // document.getElementById("btn").innerHTML = "Clicked";
 
-    ;
+    alert("Font changed! Reload to see the changes.");
 
     let h1Font = document.getElementById("h1Font").value;
     let h2Font = document.getElementById("h2Font").value;
