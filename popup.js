@@ -3,7 +3,9 @@ console.log("popup.js loaded");
 const button = document.querySelector("button");
 button.addEventListener("click", async () => {
     console.log("button clicked");
-     
+    
+    // alert("button clicked");
+
     chrome.runtime.sendMessage({
         msg: "buttonClicked", 
         data: {
