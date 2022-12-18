@@ -1,38 +1,22 @@
 // document.body.style.backgroundColor = 'orange';
 document.body.style.fontFamily = 'Helvetica, sans-serif';
-let elements = document.getElementsByTagName("span");
-for (let i = 0; i < elements.length; i++) {
-    elements[i].style.fontFamily = "Times New Roman, serif";
-    elements[i].style.backgroundColor = 'white';
-    elements[i].style.color = 'red';
+
+// fonts = ["Times New Roman, serif", "Helvetica, sans-serif", "Georgia, serif", "Monaco, monospace", "Droid Sans, sans-serif"];
+let tags = ["span", "p", "em", "b", "i", "u", "a", "li", "td", "th", "input", "option", "h1", "h2", "h3", "h4", "h5", "h6"];
+
+let fonts = {"span": "Times New Roman", "p": "Helvetica", "em": "Helvetica", "b": "Helvetica", "i": "Helvetica", "u": "Helvetica", "a": "Helvetica", "li": "Helvetica", "td": "Helvetica", "th": "Helvetica", "input": "Helvetica", "option": "Helvetica", "h1": "Georgia", "h2": "Monaco", "h3": "Droid Sans", "h4": "Helvetica", "h5": "Helvetica", "h6": "Helvetica", "default": "Helvetica"}
+let colors = {"span": "red", "p": "white", "em": "white", "b": "white", "i": "white", "u": "white", "a": "white", "li": "white", "td": "white", "th": "white", "input": "white", "option": "white", "h1": "white", "h2": "white", "h3": "white", "h4": "white", "h5": "white", "h6": "white", "default": "white"}
+
+
+for (let i = 0; i < tags.length; i++) {
+    let elements = document.getElementsByTagName(tags[i]);
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].style.fontFamily = fonts[tags[i]];
+        elements[j].style.backgroundColor = 'black';
+        elements[j].style.color = colors[tags[i]];
+    }
 }
 
-elements = document.getElementsByTagName("p");
-for (let i = 0; i < elements.length; i++) {
-    elements[i].style.fontFamily = "Helvetica, sans-serif";
-    elements[i].style.backgroundColor = 'green';
-    elements[i].style.color = 'white';
-}
 
-elements = document.getElementsByTagName("h1");
-for (let i = 0; i < elements.length; i++) {
-    elements[i].style.fontFamily = "Georgia, serif";
-    elements[i].style.backgroundColor = 'blue';
-    elements[i].style.color = 'white';
-}
-
-elements = document.getElementsByTagName("h2");
-for (let i = 0; i < elements.length; i++) {
-    elements[i].style.fontFamily = "Monaco, monospace";
-    elements[i].style.backgroundColor = 'red';
-    elements[i].style.color = 'white';
-}
-
-elements = document.getElementsByTagName("h3");
-for (let i = 0; i < elements.length; i++) {
-    elements[i].style.fontFamily = "Droid Sans, sans-serif";
-    elements[i].style.backgroundColor = 'yellow';
-    elements[i].style.color = 'white';
-}
 
 console.log("content-script.js loaded");
