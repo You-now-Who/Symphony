@@ -1,7 +1,7 @@
 body {
     width: 20rem;
     height: 20rem;
-    background-color: rgb(243, 229, 229);
+    background-color: #fff;
     border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 0 0 0.5rem 0.5rem rgba(240, 16, 16, 0.1);

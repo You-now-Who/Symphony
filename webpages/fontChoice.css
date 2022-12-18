@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(243, 229, 229);
+    background-color: #fff;
     border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 0 0 0.5rem 0.5rem rgba(240, 16, 16, 0.1);
@@ -11,7 +11,7 @@ body {
     color: #000;
 }
 #navbar {
-    background-color: rgb(243, 229, 229);
+    background-color: #fff;
     border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 0 0 0.5rem 0.5rem rgba(240, 16, 16, 0.1);
@@ -132,7 +132,7 @@ body {
     left: 0;
     height: 40px;
     width: 40px;
-    background-color: #fbf8f8;
+    background-color: #a69d9d;
     border-radius: 50%;
     transition: all 0.3s ease;
     -webkit-animation-name: pulsein;
@@ -147,12 +147,12 @@ body {
     left: 0;
     width: 80px;
     height: 8px;
-    background-color: #fbf8f8;
+    background-color: #a69d9d;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 input:checked + .switch__indicator::after {
-    background-color: #ffb4e5;
+    background-color: #000;
     transform: translateX(40px);
     -webkit-animation-name: pulseout;
     animation-name: pulseout;
@@ -160,7 +160,7 @@ input:checked + .switch__indicator::after {
     animation-duration: 0.3s;
 }
 input:checked + .switch__indicator::before {
-    background-color: #ffb4e5;
+    background-color: #000;
 }
 
 @-webkit-keyframes pulsein {
