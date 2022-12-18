@@ -17,7 +17,13 @@
 
     "host_permissions": ["https://*/*", "http://*/*"],
 
-    "permissions": ["scripting", "activeTab", "storage"],
+      "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+        
+      ],
+      "options_page": "options.html",
 
     "background": {
         "service_worker": "background.js"
