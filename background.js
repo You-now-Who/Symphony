@@ -2,14 +2,21 @@
 // and then show meaning of word in native language
 
 chrome.runtime.onInstalled.addListener(function (object) {
-  let externalUrl = "http://yoursite.com/";
+  let externalUrl = "https://you-now-who.github.io/Symphony/";
   let internalUrl = chrome.runtime.getURL("views/onboarding.html");
 
   if (object.reason === chrome.runtime.OnInstalledReason.INSTALL) {
       chrome.tabs.create({ url: externalUrl }, function (tab) {
-          console.log("New tab launched with http://yoursite.com/");
+          console.log("New tab launched with https://you-now-who.github.io/Symphony/");
       });
 
+    
+      if (chrome.runtime.openOptionsPage) {
+        chrome.runtime.openOptionsPage();
+    } else {
+        window.open(chrome.runtime.getURL('options.html'));
+    }
+    
       chrome.storage.local.set({ fonts: {"span": "Times New Roman", "p": "Times New Roman", "em": "Helvetica", "b": "Helvetica", "i": "Helvetica", "u": "Helvetica", "a": "Helvetica", "li": "Helvetica", "td": "Helvetica", "th": "Helvetica", "input": "Helvetica", "option": "Helvetica", "h1": "Georgia", "h2": "Monaco", "h3": "Droid Sans", "h4": "Helvetica", "h5": "Helvetica", "h6": "Helvetica", "div": "Helvetica", "default": "Helvetica"} }).then(() => {
         console.log("Value is set to " + {"span": "Times New Roman", "p": "Times New Roman", "em": "Helvetica", "b": "Helvetica", "i": "Helvetica", "u": "Helvetica", "a": "Helvetica", "li": "Helvetica", "td": "Helvetica", "th": "Helvetica", "input": "Helvetica", "option": "Helvetica", "h1": "Georgia", "h2": "Monaco", "h3": "Droid Sans", "h4": "Helvetica", "h5": "Helvetica", "h6": "Helvetica", "div": "Helvetica", "default": "Helvetica"});
       });
