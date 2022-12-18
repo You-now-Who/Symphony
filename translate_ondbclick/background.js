@@ -1,9 +1,9 @@
 
-// addEventListener('dblclick', (event) => {
 
-
-
-// });
+ondblclick = (event) => {
+    const info = getSelectionText();
+    onDblClick(info);
+ };
 
 function getSelectionText() {
     var text = "";
@@ -25,9 +25,9 @@ function onDblClick(info) {
     });
   }
   
-  chrome.action.ondblclick.addListener((tab) => {
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      func: onDblClick
-    });
-  });
+//   chrome.action.ondblclick.addListener((tab) => {
+//     chrome.scripting.executeScript({
+//       target: { tabId: tab.id },
+//       func: onDblClick
+//     });
+//   });
