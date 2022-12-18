@@ -1,6 +1,6 @@
 // document.body.style.backgroundColor = 'orange';
 document.body.style.fontFamily = 'Helvetica, sans-serif';
-document.body.style.backgroundColor = 'yellow';
+// document.body.style.backgroundColor = 'yellow';
 
 // fonts = ["Times New Roman, serif", "Helvetica, sans-serif", "Georgia, serif", "Monaco, monospace", "Droid Sans, sans-serif"];
 let tags = ["span", "p", "em", "b", "i", "u", "a", "li", "td", "th", "input", "option", "h1", "h2", "h3", "h4", "h5", "h6", "div"];
@@ -17,8 +17,8 @@ chrome.storage.local.get(['fonts'], function(result) {
         let elements = document.getElementsByTagName(tags[i]);
         for (let j = 0; j < elements.length; j++) {
             elements[j].style.fontFamily = fonts[tags[i]];
-            elements[j].style.backgroundColor = 'black';
-            elements[j].style.color = colors[tags[i]];
+            // elements[j].style.backgroundColor = 'black';
+            // elements[j].style.color = colors[tags[i]];
             console.log(elements[j].style.fontFamily)
         }
     }
